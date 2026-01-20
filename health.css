@@ -1,0 +1,498 @@
+/* Health Tracking App Styles */
+.health-container {
+    font-family: 'Inter', sans-serif;
+}
+
+.health-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.health-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.calorie-card {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.water-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.weight-card {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+}
+
+.activity-card {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+}
+
+.meal-card {
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.meal-card.breakfast {
+    border-left-color: #f59e0b;
+}
+
+.meal-card.lunch {
+    border-left-color: #10b981;
+}
+
+.meal-card.dinner {
+    border-left-color: #8b5cf6;
+}
+
+.meal-card.snack {
+    border-left-color: #3b82f6;
+}
+
+.nutrient-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.nutrient-protein {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.nutrient-carbs {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.nutrient-fat {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.nutrient-fiber {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.input-health {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-health:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.select-health {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 16px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select-health:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.btn-health-primary {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-health-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+}
+
+.btn-health-secondary {
+    background: white;
+    color: #10b981;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border: 2px solid #10b981;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-health-secondary:hover {
+    background: #10b981;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-btn-health {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    border: 2px solid #e5e7eb;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn-health.active {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.filter-btn-health:hover {
+    transform: translateY(-2px);
+}
+
+.delete-btn-health {
+    color: #ef4444;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.delete-btn-health:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.edit-btn-health {
+    color: #f59e0b;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.edit-btn-health:hover {
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-slideIn {
+    animation: slideIn 0.3s ease;
+}
+
+/* Water drop animation */
+.water-drop {
+    animation: waterDrop 0.5s ease;
+}
+
+@keyframes waterDrop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Progress bars */
+.progress-bar-container {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Nutrition facts label */
+.nutrition-label {
+    background: white;
+    border: 3px solid black;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.nutrition-label hr {
+    border: none;
+    border-top: 6px solid black;
+    margin: 10px 0;
+}
+
+.nutrition-label .thin-hr {
+    border-top: 1px solid black;
+}
+
+.nutrition-label .thick-hr {
+    border-top: 8px solid black;
+}
+
+/* Food search results */
+.food-result {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.food-result:hover {
+    background-color: #f9fafb;
+    transform: translateX(5px);
+}
+
+/* Calendar styling */
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-day:hover {
+    background-color: #f3f4f6;
+}
+
+.calendar-day.active {
+    background-color: #10b981;
+    color: white;
+}
+
+.calendar-day.has-data {
+    position: relative;
+}
+
+.calendar-day.has-data::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #10b981;
+    border-radius: 50%;
+}
+
+/* Weight trend line */
+.weight-trend-line {
+    fill: none;
+    stroke: #10b981;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Notification */
+.health-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+    max-width: 400px;
+}
+
+.health-notification.success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.health-notification.error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.health-notification.info {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+/* Water intake glasses */
+.water-glass {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.3) 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.water-glass.active {
+    background: linear-gradient(to bottom, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.water-glass .water-level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, #3b82f6 0%, #1d4ed8 100%);
+    border-radius: 0 0 18px 18px;
+    transition: height 0.5s ease;
+}
+
+.water-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .health-container {
+        padding: 16px;
+    }
+    
+    .btn-health-primary,
+    .btn-health-secondary {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .calendar-day {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .water-glass {
+        width: 50px;
+        height: 70px;
+    }
+}
+
+/* Print styles for nutrition labels */
+@media print {
+    .health-notification,
+    .no-print {
+        display: none !important;
+    }
+    
+    .nutrition-label {
+        border: 3px solid black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Loading animation */
+.loading-spinner {
+    border: 3px solid rgba(16, 185, 129, 0.1);
+    border-top-color: #10b981;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
