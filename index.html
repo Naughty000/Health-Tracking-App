@@ -3,91 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calorie Counter</title>
-    <link rel="stylesheet" href="calorie.css">
+    <title>Health & Nutrition Tracker | Calorie Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="health.css">
 </head>
-<body>
-    <h1>Calorie Counter</h1>
-    <div class="container">
-        <pre><b>Budget</b> <input id="budget" type="number" step="1" min="0" placeholder="Daily Calorie Budget"></pre>
-        
-        <fieldset>
-            <legend class="meal"><b>Breakfast</b></legend>
-            <div id="Break" class="Entry_Break"> 
-                <p>Entry 1 Name:</p>
-                <input type="text" placeholder="Name">
-                <p>Entry 1 calories: </p>
-                <input type="number" id="cal1" placeholder="XX">
-            </div>
-        </fieldset>
-        <br>
-        
-        <fieldset>
-            <legend class="meal"><b>Lunch</b></legend>
-            <div id="lunc" class="Entry_Break">
-                <p>Entry 1 Name:</p>
-                <input type="text" placeholder="Name">
-                <p>Entry 1 calories: </p>
-                <input type="number" id="cal2" placeholder="XX">
-            </div>
-        </fieldset>
-        <br>
-        
-        <fieldset>
-            <legend class="meal"><b>Dinner</b></legend>
-            <div id="Din" class="Entry_Break">
-                <p>Entry 1 Name:</p>
-                <input type="text" placeholder="Name">
-                <p>Entry 1 calories: </p>
-                <input type="number" id="cal3" placeholder="XX">
-            </div>
-        </fieldset>
-        <br>
-        
-        <fieldset>
-            <legend class="meal"><b>Snacks</b></legend>
-            <div id="Snak" class="Entry_Break">
-                <p>Entry 1 Name:</p>
-                <input type="text" placeholder="Name">
-                <p>Entry 1 calories: </p>
-                <input type="number" id="cal4" placeholder="XX">
-            </div>
-        </fieldset>
-        <br>
-        
-        <fieldset>
-            <legend class="meal"><b>Exercise</b></legend>
-            <div id="Ex" class="Entry_Break">
-                <p>Entry 1 Name:</p>
-                <input type="text" placeholder="Name">
-                <p>Entry 1 calories: </p>
-                <input type="number" id="cal5" placeholder="XX">
-            </div>
-        </fieldset>
-        <br>
-        
-        <pre>
-<b>Add food or Exercise</b>  
-<select id="options">
-    <option value="Breakfast">Breakfast</option>
-    <option value="Lunch">Lunch</option>
-    <option value="Dinner">Dinner</option>
-    <option value="Snacks">Snacks</option>
-    <option value="Exercise">Exercise</option>
-</select>  
-<button id="Entry" type="button">Add Entry</button>
-<button type="button" id="Calculate">Calculate Remaining calories</button> 
-<button type="button" id="Clear">Clear</button>
-        </pre>
-
-        <div id="result">
-            <pre id="res">4 Calories defic</pre>
-            <pre id="total_budget">18 Calories Budgeted</pre>
-            <pre id="consumed_calories">34 Calories Consumed</pre>
-            <pre id="Burned_calories">20 Calories Burned</pre>
-        </div>
+<body class="bg-gradient-to-br from-green-50 to-blue-50 min-h-screen">
+    <div id="app" class="min-h-screen">
+        <!-- App will be rendered here -->
     </div>
     
-    <script src="calories.js"></script>
+    <script src="health.js"></script>
 </body>
 </html>
